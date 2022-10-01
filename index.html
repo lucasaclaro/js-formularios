@@ -10,16 +10,87 @@
 <body>
     <h1>Formulário</h1>
     <form action="cadastro.php" method="post" autocomplete="on">
-        <p><label for="inome">Nome: </label>
-            <input type="text" name="nome" id="inome" required minlength="5" maxlength="15" autocomplete="name"></p>
-        <p><label for="isobrenome">Sobrenome: </label>
-            <input type="text" name="sobrenome" id="isobrenome" required minlength="1" maxlength="15" autocomplete="additional-name"></p>
-        <p><label for="isenha">Senha: </label>
-            <input type="password" name="senha" id="isenha" required minlength="8" maxlength="15" autocomplete="new-password" placeholder="Mín. 8 e Máx. 15 caracteres ">
-        </p>
-        <input type="submit" value="Enviar">
-        <input type="reset" value="Limpar">
-            
+        <fieldset><legend>Dados pessoais</legend>
+
+                <p><label for="inome">Nome: </label>
+                    <input type="text" name="nome" id="inome" required minlength="5" maxlength="15" autocomplete="name"></p>
+
+                <p><label for="isobrenome">Sobrenome: </label>
+                    <input type="text" name="sobrenome" id="isobrenome" required minlength="1" maxlength="15" autocomplete="additional-name"></p>
+
+                <input type="radio" name="sexo" id="isexomasc" value="masculino"><label for="isexomasc">Masculino</label>
+                <input type="radio" name="sexo" id="isexofem" value="feminino" checked><label for="isexofem">Feminino</label>
+                
+                <p><label for="iestado">Estado:</label>
+                <select name="estado" id="iestado">
+                    <option value="" selected>---Escolha---</option>
+                    <option value="ac">Acre</option>
+                    <option value="al">Alagoas</option>
+                    <option value="ap">Amapá</option>
+                    <option value="am">Amazonas</option>
+                    <option value="ba">Bahia</option>
+                    <option value="ce">Ceará</option>
+                    <option value="df">Distrito Federal</option>
+                    <option value="es">Espírito Santo</option>
+                    <option value="go">Goiás</option>
+                    <option value="ma">Maranhão</option>
+                    <option value="mt">Mato Grosso</option>
+                    <option value="ms">Mato Grosso do Sul</option>
+                    <option value="mg">Minas Gerais</option>
+                    <option value="pa">Pará</option>
+                    <option value="pb">Paraíba</option>
+                    <option value="pr">Paraná</option>
+                    <option value="pe">Pernambuco</option>
+                    <option value="pi">Piauí</option>
+                    <option value="rj">Rio de Janeiro</option>
+                    <option value="rn">Rio Grande do Norte</option>
+                    <option value="rs">Rio Grande do Sul</option>
+                    <option value="ro">Rondônia</option>
+                    <option value="rr">Roraima</option>
+                    <option value="sc">Santa Catarina</option>
+                    <option value="sp">São Paulo</option>
+                    <option value="se">Sergipe</option>
+                    <option value="sp">Tocantis</option>    
+
+                </select>
+                </p>
+
+                <p><label for="iemail">E-mail: </label>
+                    <input type="email" name="email" id="iemail"></p>
+
+                <p><label for="itel">Telefone: </label>
+                    <input type="tel" name="telefone" id="itelefone"></p>
+
+                <p><label for="isenha">Senha: </label>
+                    <input type="password" name="senha" id="isenha" required minlength="8" maxlength="15" autocomplete="new-password" placeholder="Mín. 8 e Máx. 15 caracteres ">
+                </p> 
+
+                <p><label for="ifoto">Foto do perfil:</label><br><br>
+                    <input type="file" name="foto" id="ifoto"></p>
+
+                <p><label for="idescricao">Faça uma breve descrição sobre você:</label><br>
+                    <textarea name="descricao" id="idescricao" cols="30" rows="10"></textarea>
+                </p>
+
+        </fieldset>
+        <br>
+        <fieldset><legend>Dados complementares</legend>
+            <p>Como você avalia seu nível de conhecimento em Inglês? <br>
+                <input type="range" name="nivelingles" id="inivelingles">
+                </p>
+            <p>Como conheceu nossa empresa?
+                    <br>
+                <input type="checkbox" name="instagram" id="iinstagram" checked><label for="iopcoes">Instagram</label>
+                <input type="checkbox" name="facebook" id="ifacebook"><label for="ifacebook">Facebook</label>
+                <input type="checkbox" name="youtube" id="iyoutube"><label for="iyoutube">Youtube</label>
+                <input type="checkbox" name="outrasmidias" id="ioutrasmidias"><label for="ioutrasmidias">Outras mídias</label>
+            </p>
+
+
+        </fieldset>   
+    <br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
 
     </form>
     
